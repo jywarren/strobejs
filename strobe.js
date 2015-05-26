@@ -1,5 +1,6 @@
 var fps = 10,
     drawLoop = false, 
+    height = $(window).height();
     light = true;
 
 jQuery(document).ready(function($) {
@@ -29,10 +30,15 @@ jQuery(document).ready(function($) {
     reset(fps);
   })
 
+  $(window).mousemove(function(e) {
+    fps = parseInt((e.pageY/height) * 200)
+  })
+
   $(window).click(function() {
     if (drawLoop) {
       clearInterval(drawLoop);
       drawLoop = false;
+      $('.fps').html(0);
     } else {
       reset(fps);
     }
