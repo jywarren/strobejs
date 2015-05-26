@@ -32,8 +32,10 @@ jQuery(document).ready(function($) {
 
   $(window).mousemove(function(e) {
     fps = parseInt((e.pageY/height) * 200)
+    reset(fps);
   })
 
+  /* on/off, disable for now
   $(window).click(function() {
     if (drawLoop) {
       clearInterval(drawLoop);
@@ -43,6 +45,7 @@ jQuery(document).ready(function($) {
       reset(fps);
     }
   })
+  */
 
   reset(fps);
 });
