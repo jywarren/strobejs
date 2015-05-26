@@ -1,7 +1,15 @@
 body {
   text-align:center;
+  font-family: Helvetica, sans-serif;
 }
 .strobe {
   padding:10%;
   font-size:30px;
+}
+p {
+  font-size:12px;
+}
+a {
+  color:#aaa;
+  text-decoration:none;
 }
